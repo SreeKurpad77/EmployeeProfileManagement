@@ -1,0 +1,808 @@
+{
+	"info": {
+		"_postman_id": "68e83362-f9bb-4ff3-8f49-ee96585b7105",
+		"name": "EmployeeProfile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27054214"
+	},
+	"item": [
+		{
+			"name": "Get All Profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/profiles",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"profiles"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Profiles - Empty Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/profiles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 03:17:29 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"result\": [],\n    \"errorMessage\": \"\"\n}"
+				},
+				{
+					"name": "Get All Profiles - List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/profiles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 04:14:02 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"result\": [\n        {\n            \"name\": \"John Doe\",\n            \"dateofBirth\": \"1958-01-01T00:00:00\",\n            \"designation\": \"Manager\",\n            \"hireDate\": \"1990-01-01T00:00:00\",\n            \"photoUrl\": \"https://www.images.com/123\",\n            \"id\": 3\n        },\n        {\n            \"name\": \"John A Smith\",\n            \"dateofBirth\": \"1968-11-11T00:00:00\",\n            \"designation\": \"Administrator\",\n            \"hireDate\": \"1996-11-11T00:00:00\",\n            \"photoUrl\": \"https://www.images.com/345\",\n            \"id\": 4\n        }\n    ],\n    \"errorMessage\": \"\"\n}"
+				},
+				{
+					"name": "Get All Profiles - After 3rd Post",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/profiles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 04:17:40 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"result\": [\n        {\n            \"name\": \"John Doe\",\n            \"dateofBirth\": \"1958-01-01T00:00:00\",\n            \"designation\": \"Manager\",\n            \"hireDate\": \"1990-01-01T00:00:00\",\n            \"photoUrl\": \"https://www.images.com/123\",\n            \"id\": 3\n        },\n        {\n            \"name\": \"John A Smith\",\n            \"dateofBirth\": \"1968-11-11T00:00:00\",\n            \"designation\": \"Administrator\",\n            \"hireDate\": \"1996-11-11T00:00:00\",\n            \"photoUrl\": \"https://www.images.com/345\",\n            \"id\": 4\n        },\n        {\n            \"name\": \"Mary McLauren\",\n            \"dateofBirth\": \"1998-11-11T00:00:00\",\n            \"designation\": \"Cashier\",\n            \"hireDate\": \"1990-11-11T00:00:00\",\n            \"photoUrl\": \"https://www.images.com/456\",\n            \"id\": 6\n        }\n    ],\n    \"errorMessage\": \"\"\n}"
+				},
+				{
+					"name": "Get All Profiles - After Delete",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/profiles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 04:18:14 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isSuccess\": true,\n    \"result\": [\n        {\n            \"name\": \"John Doe\",\n            \"dateofBirth\": \"1958-01-01T00:00:00\",\n            \"designation\": \"Manager\",\n            \"hireDate\": \"1990-01-01T00:00:00\",\n            \"photoUrl\": \"https://www.images.com/123\",\n            \"id\": 3\n        },\n        {\n            \"name\": \"John A Smith\",\n            \"dateofBirth\": \"1968-11-11T00:00:00\",\n            \"designation\": \"Administrator\",\n            \"hireDate\": \"1996-11-11T00:00:00\",\n            \"photoUrl\": \"https://www.images.com/345\",\n            \"id\": 4\n        }\n    ],\n    \"errorMessage\": \"\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Profile By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/profiles/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"profiles",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Profile By Id - Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/profiles/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 03:21:16 GMT"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Get Profile By Id - Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/profiles/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 03:54:24 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"John Doe\",\n    \"dateofBirth\": \"1958-01-01T00:00:00\",\n    \"designation\": \"Administrator\",\n    \"hireDate\": \"1990-01-01T00:00:00\",\n    \"photoUrl\": \"https://www.images.com/123\",\n    \"id\": 3\n}"
+				},
+				{
+					"name": "Get Profile By Id - After Update",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/profiles/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 04:10:21 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"John Doe\",\n    \"dateofBirth\": \"1958-01-01T00:00:00\",\n    \"designation\": \"Manager\",\n    \"hireDate\": \"1990-01-01T00:00:00\",\n    \"photoUrl\": \"https://www.images.com/123\",\n    \"id\": 3\n}"
+				},
+				{
+					"name": "Get Profile By Id - After 2nd Post",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/profiles/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 04:12:00 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"John Smith\",\n    \"dateofBirth\": \"1968-11-11T00:00:00\",\n    \"designation\": \"Administrator\",\n    \"hireDate\": \"1996-11-11T00:00:00\",\n    \"photoUrl\": \"https://www.images.com/345\",\n    \"id\": 4\n}"
+				},
+				{
+					"name": "Get Profile By Id - After 2nd Update",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/profiles/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 04:13:35 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"John A Smith\",\n    \"dateofBirth\": \"1968-11-11T00:00:00\",\n    \"designation\": \"Administrator\",\n    \"hireDate\": \"1996-11-11T00:00:00\",\n    \"photoUrl\": \"https://www.images.com/345\",\n    \"id\": 4\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Profile",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/profiles/6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"profiles",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Profile",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/profiles/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 04:16:39 GMT"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Add Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mary McLauren\",\r\n    \"dateofBirth\": \"1998-11-11\",\r\n    \"designation\": \"Cashier\",\r\n    \"hireDate\": \"1990-11-11\",\r\n    \"photoUrl\": \"https://www.images.com/456\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44337/profiles",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"profiles"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Profile - Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"dateofBirth\": \"1958-01-01\",\r\n    \"designation\": \"Administrator\",\r\n    \"hireDate\": \"1990-01-01\",\r\n    \"photoUrl\": \"https://www.images.com/123\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44337/profiles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Location",
+							"value": "/profiles/3"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 03:53:59 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"John Doe\",\n    \"dateofBirth\": \"1958-01-01T00:00:00\",\n    \"designation\": \"Administrator\",\n    \"hireDate\": \"1990-01-01T00:00:00\",\n    \"photoUrl\": \"https://www.images.com/123\",\n    \"id\": 3\n}"
+				},
+				{
+					"name": "Add Profile - 2nd Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Smith\",\r\n    \"dateofBirth\": \"1968-11-11\",\r\n    \"designation\": \"Administrator\",\r\n    \"hireDate\": \"1996-11-11\",\r\n    \"photoUrl\": \"https://www.images.com/345\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44337/profiles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Location",
+							"value": "/profiles/4"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 04:11:25 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"John Smith\",\n    \"dateofBirth\": \"1968-11-11T00:00:00\",\n    \"designation\": \"Administrator\",\n    \"hireDate\": \"1996-11-11T00:00:00\",\n    \"photoUrl\": \"https://www.images.com/345\",\n    \"id\": 4\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John A Smith\",\r\n    \"dateofBirth\": \"1968-11-11T00:00:00\",\r\n    \"designation\": \"Administrator\",\r\n    \"hireDate\": \"1996-11-11T00:00:00\",\r\n    \"photoUrl\": \"https://www.images.com/345\",\r\n    \"id\": 4\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44337/profiles",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"profiles"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Profile - Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"dateofBirth\": \"1958-01-01T00:00:00\",\r\n    \"designation\": \"Manager\",\r\n    \"hireDate\": \"1990-01-01T00:00:00\",\r\n    \"photoUrl\": \"https://www.images.com/123\",\r\n    \"id\": 4\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44337/profiles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 04:09:44 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"John Doe\",\n    \"dateofBirth\": \"1958-01-01T00:00:00\",\n    \"designation\": \"Manager\",\n    \"hireDate\": \"1990-01-01T00:00:00\",\n    \"photoUrl\": \"https://www.images.com/123\",\n    \"id\": 3\n}"
+				},
+				{
+					"name": "Update Profile - 2nd Update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John A Smith\",\r\n    \"dateofBirth\": \"1968-11-11T00:00:00\",\r\n    \"designation\": \"Administrator\",\r\n    \"hireDate\": \"1996-11-11T00:00:00\",\r\n    \"photoUrl\": \"https://www.images.com/345\",\r\n    \"id\": 4\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44337/profiles",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"profiles"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 23 Apr 2023 04:13:15 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"John A Smith\",\n    \"dateofBirth\": \"1968-11-11T00:00:00\",\n    \"designation\": \"Administrator\",\n    \"hireDate\": \"1996-11-11T00:00:00\",\n    \"photoUrl\": \"https://www.images.com/345\",\n    \"id\": 4\n}"
+				}
+			]
+		}
+	]
+}
