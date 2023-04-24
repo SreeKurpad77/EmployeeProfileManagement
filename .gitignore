@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/src/EmployeeProfileManagement.API/Properties/ServiceDependencies/API Deployment/secrets1.arm.json
+/src/EmployeeProfileManagement.API/Properties/ServiceDependencies/API Deployment/profile.arm.json
+/src/EmployeeProfileManagement.Web.Mvc/Properties/ServiceDependencies/EmployeeProfileManagementWeb - Web Deploy/profile.arm.json
